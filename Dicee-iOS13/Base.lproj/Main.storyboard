@@ -41,6 +41,9 @@
                                     <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECA-xj-T4O"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="UYe-sA-dSA">
                                 <rect key="frame" x="244" y="388" width="120" height="120"/>
@@ -52,6 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="diceImageViewOne" destination="0EF-rp-gd6" id="sip-Do-qQQ"/>
+                        <outlet property="diceImageViewTwo" destination="UYe-sA-dSA" id="BnD-HH-GlD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
