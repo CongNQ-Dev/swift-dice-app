@@ -3,24 +3,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var diceImageViewOne: UIImageView!
-    @IBOutlet weak var diceImageViewTwo: UIImageView!
-    var leftSide=1
-    var rightSide=5
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-      
-    }
-    
+    @IBOutlet var diceImageViewOne: UIImageView!
+    @IBOutlet var diceImageViewTwo: UIImageView!
+    var diceArray = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
+
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        print("hihi")
-        diceImageViewOne.image=[#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")][leftSide]
-        diceImageViewTwo.image=[#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")][rightSide]
-        leftSide+=1
-        rightSide-=1
+        diceImageViewOne.image = diceArray[Int.random(in: 0 ... 5)]
+        diceImageViewTwo.image = diceArray[Int.random(in: 0 ... 5)]
     }
 }
-
-
-
